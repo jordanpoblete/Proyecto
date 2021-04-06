@@ -3,17 +3,7 @@ body {
 background-color: rgb(93, 193, 185);
 
 }
-c, caja{
-display:flex;
-}
 
-p, descr{
-display:block;
-}
-
-f, fecha{
-color: gray;
-}
 
 #titulo{
 font-size: 40px;
@@ -27,8 +17,8 @@ font-family:fantasy;
 
 
 #menuwu {
-
 color: #FFF;}
+
 
 a:link {color:#ffffff;}
 a:visited {color:#ffffff;}
