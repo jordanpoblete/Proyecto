@@ -17,6 +17,13 @@ font-family:fantasy;
 #menuwu {
 color: #FFF;}
 
+.carousel-item img{
+    margin: 0 auto;
+}
+
+.carousel-caption {
+    text-shadow:2px 0px black ;
+}
 
 
 
