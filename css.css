@@ -51,9 +51,10 @@ font-family:fantasy;
 
 @media screen and (min-width:380px){
     .buscar:hover > .buscar_texto{
-        width: 160px;
+        width: 80px;
     }
 }
+
 
 @media screen and (min-width:768px){
     .buscar:hover > .buscar_texto{
@@ -96,12 +97,6 @@ font-family:fantasy;
         -webkit-column-count: 5;
         -moz-column-count: 5;
         column-count: 5;
-    }
-}
-
-@media screen and (min-width:380px){
-    .buscar:hover > .buscar_texto{
-        width: 80px;
     }
 }
 
