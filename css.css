@@ -16,18 +16,19 @@ font-family:fantasy;
 #cuadro {
     margin: 10px auto;
 }
-
 .buscar{
+    margin: 10px;
     display: flex;
-    text-align: center;
-    justify-content: left;
-    align-items: center;
+    text-align: right;
+    justify-content: right;
+    align-items: right;
     position: absolute;
     background: #ffffff;
     padding: 10px;
     height: 40px;
     border-radius: 35px;
 }
+
 .buscar_texto{
     border: none;
     background: none;
@@ -97,6 +98,14 @@ font-family:fantasy;
         column-count: 5;
     }
 }
+
+@media screen and (min-width:380px){
+    .buscar:hover > .buscar_texto{
+        width: 80px;
+    }
+}
+
+
 
 
 
