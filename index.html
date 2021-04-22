@@ -132,44 +132,46 @@
   <p></p>
 
   <div class="container">
-
-  <form>
-    <div class="row">
-      <div class="col-md-6">
-      <div class="form-group">
-        <label for="exampleFormControlInput1">Correo Electronico</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com">
+    <form>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="correo">Correo Electronico</label>
+            <input type="email" class="form-control" nombre="correo" id="correo" placeholder="nombre@ejemplo.com">
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="tipo">Seleccione tipo</label>
+              <select class="form-control" nombre="tipo" id="tipo">
+                <option>Ilustracion</option>
+                <option>Diseño</option>
+                <option>Graffiti</option>
+                <option>Portada</option>
+                <option>Identidad</option>
+              </select>
+          </div>
+        </div>
       </div>
-      </div>
-      <div class="col-md-6">
-      <div class="form-group">
-        <label for="exampleFormControlSelect1">Seleccione tipo</label>
-        <select class="form-control" id="exampleFormControlSelect1">
-          <option>Ilustracion</option>
-          <option>Diseño</option>
-          <option>Graffiti</option>
-          <option>Portada</option>
-          <option>Identidad</option>
-        </select>
-      </div>
-      </div>
-    </div>
-    
- 
- 
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Descripcion breve de lo que necesita</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
-  <button class="btn btn-primary" type="submit" >Solicitar</button>
-  </form>
+      
   
+  
+      <div class="form-group">
+        <label for="descripcion">Descripcion breve de lo que necesita</label>
+        <textarea class="form-control" id="descripcion" placeholder="Escriba una descripcion breve de lo que necesita." rows="3"></textarea>
+      </div>
+
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit" >Solicitar</button>
+      </div>
+
+    </form>  
   </div>
 </div>
 
 <p>
 </p>
-
 <footer class="abajo">
   © Wojojojo inc.   -   Sayko Design
 </footer>
