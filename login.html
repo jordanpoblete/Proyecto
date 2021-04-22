@@ -60,39 +60,42 @@
 
    <p></p>
 
-    <div class="container-fluid">
-    
-    
+    <div class="container">
+    <form>
 
-    <form action="#">
         <div class="mb-4 w-50" id="cuadro">
-            <label class="visually-hidden" for="exampleInputEmail1">Correo Electrónico</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="nombre@gmail.com" required>
-          
+          <div class="form-group">
+            <label class="visually-hidden" for="correoelectronico">Correo Electrónico</label>
+            <input type="email" class="form-control" name="correoelectronico" id="correoelectronico" placeholder="example@ejemplo.com" required>
+          </div>
+
         </div>
-        
+
         <div class="mb-4 w-50" id="cuadro">
-        
-          <label class="visually-hidden" for="InputPassword">Contraseña</label>
-          <input type="password" class="form-control" id="InputPassword" placeholder="**************" required>
+          <div class="form-group">
+            <label class="visually-hidden" for="password">Contraseña</label>
+            <input type="password" class="form-control" name="password" id="password" placeholder="**************" required>
+          </div>
         </div>
 
         <div class="mb-4 w-50 form-check" id="cuadro">
-          <i class="bi bi-eye-slash-fill"></i>
-            <input type="checkbox" class="form-check-imput" name="connected">
-            <label for="connected" class="form-check-label">Mantener sesión iniciada</label>  
-
+          <div class="form-check">
+              <input type="checkbox" class="form-check-input" name="conectado" id="conectado" value="conectado">
+              <label for="conectado" class="form-check-label">Mantener sesión iniciada</label>  
+          </div>
         </div>
+        
         <div class="text-center">
-        <div class="d-grid">
+          <div class="d-grid">
             <button type="submit" class="btn btn-primary">Iniciar</button>
+          </div>
         </div>
-        </div>
+
         <div class="text-center">
-        <div class="my-3">
+          <div class="my-3">
             <span>¿No tienes cuenta? <a href="Register.html">Regístrate</a></span><br>
             <span><a href="recuperarcontra.html">Recuperar contraseña</a></span>
-        </div>
+          </div>
         </div>
     </form>
 
