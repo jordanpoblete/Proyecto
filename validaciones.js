@@ -14,20 +14,28 @@ $(function() {
           required: true,
           // Specify that email should be validated
           // by the built-in "email" rule
-          correo: true
+          email: true
         },
         Num: {
           required: true,
-          minlength: 9
+          minlength: 9,
+          digits: true
+        },
+        rad: { // <- NAME of every radio in the same group
+            required: true
         }
+
       },
+
       // Specify validation error messages
       messages: {
         Nombre: "Por favor ingrese su nombre",
+        rad: "Seleccione una opcion",
         Apellidos: "Por favor ingrese su apellido",
         Num: {
           required: "Por favor ingrese su numero",
-          minlength: "El numero debe tener un minimo de 9 digitos"
+          minlength: "El numero debe tener un minimo de 9 digitos",
+          digits: "Por favor ingrese solo numeros"
         },
         correo: "Por favor ingrese un correo valido"
       },
