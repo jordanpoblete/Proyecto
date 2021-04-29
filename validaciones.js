@@ -10,6 +10,8 @@ $(function() {
         // on the right side
         Nombre: "required",
         Apellidos: "required",
+        rutpas: "required",
+        Ciudad: "required",
         correo: {
           required: true,
           // Specify that email should be validated
@@ -30,8 +32,10 @@ $(function() {
       // Specify validation error messages
       messages: {
         Nombre: "Por favor ingrese su nombre",
-        rad: "Seleccione una opcion",
+        rad: "Seleccione una",
         Apellidos: "Por favor ingrese su apellido",
+        rutpas: "Por favor complete este campo",
+        Ciudad: "Por favor indique su direccion",
         Num: {
           required: "Por favor ingrese su numero",
           minlength: "El numero debe tener un minimo de 9 digitos",
