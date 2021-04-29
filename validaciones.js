@@ -8,28 +8,28 @@ $(function() {
         // The key name on the left side is the name attribute
         // of an input field. Validation rules are defined
         // on the right side
-        firstname: "required",
-        lastname: "required",
-        email: {
+        Nombre: "required",
+        Apellidos: "required",
+        correo: {
           required: true,
           // Specify that email should be validated
           // by the built-in "email" rule
-          email: true
+          correo: true
         },
-        password: {
+        Num: {
           required: true,
-          minlength: 5
+          minlength: 9
         }
       },
       // Specify validation error messages
       messages: {
-        firstname: "Please enter your firstname",
-        lastname: "Please enter your lastname",
-        password: {
-          required: "Please provide a password",
-          minlength: "Your password must be at least 5 characters long"
+        Nombre: "Por favor ingrese su nombre",
+        Apellidos: "Por favor ingrese su apellido",
+        Num: {
+          required: "Por favor ingrese su numero",
+          minlength: "El numero debe tener un minimo de 9 digitos"
         },
-        email: "Please enter a valid email address"
+        correo: "Por favor ingrese un correo valido"
       },
       // Make sure the form is submitted to the destination defined
       // in the "action" attribute of the form when valid
@@ -38,3 +38,4 @@ $(function() {
       }
     });
   });
+
