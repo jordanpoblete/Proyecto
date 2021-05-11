@@ -1,0 +1,22 @@
+#register {
+    padding: 20px;
+    background: rgb(65, 168, 160);
+    color: #fff;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+  }
+  
+  
+  
+  .error {
+    color: #ff0000;
+  }
+
+  #confirme-error{
+    /* margin-left: 70px; */
+    left: 90px;
+    top: 0px;
+    position: absolute;
+    width: 300px;
+  }
