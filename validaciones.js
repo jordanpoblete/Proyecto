@@ -18,6 +18,7 @@ $(function() {
           // by the built-in "email" rule
           email: true
         },
+                
         Num: {
           required: true,
           minlength: 9,
@@ -41,7 +42,8 @@ $(function() {
           minlength: "El numero debe tener un minimo de 9 digitos",
           digits: "Por favor ingrese solo numeros"
         },
-        correo: "Por favor ingrese un correo valido"
+        
+        correo:  "Por favor ingrese un correo valido"
       },
       // Make sure the form is submitted to the destination defined
       // in the "action" attribute of the form when valid
