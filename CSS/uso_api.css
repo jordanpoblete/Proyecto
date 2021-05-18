@@ -32,3 +32,8 @@ background-color: rgb(93, 193, 185);
     background-color: rgb(207, 52, 118) ;
     border-color: black;
 }
+
+a:link {color:#ffffff;}
+a:visited {color:#ffffff;}
+a:active {color:#ffffff;}
+a:hover {color:rgb(207, 52, 118);}
