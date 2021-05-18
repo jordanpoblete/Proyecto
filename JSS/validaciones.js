@@ -44,14 +44,17 @@ $(function() {
         },
         
         correo:  "Por favor ingrese un correo valido"
-      },
+      },     
       // Make sure the form is submitted to the destination defined
       // in the "action" attribute of the form when valid
       submitHandler: function(form) {
         form.submit();
-      }
+      }     
     });
   });
+
+
+  
 
   function checkRut(rut) {
     // Despejar Puntos
@@ -99,5 +102,9 @@ $(function() {
     
     // Si todo sale bien, eliminar errores (decretar que es válido)
     rut.setCustomValidity('');
+    
 }
 
+
+
+  
