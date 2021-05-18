@@ -12,6 +12,9 @@ $(function() {
           required: true,
           validRut: true
         },
+        pasaporte1: {
+          required: true,
+          minlength: 9},
         Nombre: "required",
         Apellidos: "required",
         Ciudad: "required",
@@ -37,6 +40,9 @@ $(function() {
       messages: {
         Nombre: "Por favor ingrese su nombre",
         rad: "Seleccione una",
+        pasaporte1: {
+          required: "Por favor ingrese su pasaporte",
+          minlegth: "Ingrese al menos 9 numeros"},
         Apellidos: "Por favor ingrese su apellido",
         rut: {
           required: "Por favor ingrese su rut"},
