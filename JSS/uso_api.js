@@ -1,7 +1,7 @@
-$(document).ready(function(){
+$(document).ready(inicioapi)
     console.log("DOM cargado")
 
-    $('#api1').click(function(){
+    function inicioapi(){
         console.log("Boton traer datos fue clickeado")
         var urlheyhey = 'https://api.artic.edu/api/v1/artworks'
         $.get({
@@ -24,5 +24,6 @@ $(document).ready(function(){
                 console.error(error);       
             }
         });
-    });
-});
+    }
+    
+;
