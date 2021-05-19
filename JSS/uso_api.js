@@ -8,22 +8,28 @@ $(document).ready(inicioapi)
             url: urlheyhey, //DIRECCIÓN SERVER
             success: function(listadopinturas) {
                 console.log(listadopinturas)
-                var tabla=$('#tabla-cat-comida tbody')
-                tabla.empty()
+                var carta=$('#listado')
+                carta.empty()
 
-                $.each(listadopinturas.data, function(i, pintura){
+                $.each(listadopinturas.data, function(i, arte){
 
-                    tabla.append("<tr><td>" + pintura.place_of_origin + "</td><td>" + 
-                    pintura.artist_title +"</td><td>" + 
-                    "<img src=https://www.artic.edu/iiif/2/" + pintura.image_id + "/full/200,/0/default.jpg /></td><td>" + 
-                    pintura.title + "</td></tr>");
+                    carta.append(
+                        agregarpintura(arte.title, arte.image_id, arte.artist_title)
+                    );
                 })
             },
             error: function() {
                 console.error("Respuesta con error");
                 console.error(error);       
             }
-        });
-    }
+        })
+    };
+
+    function agregarpintura(titulo, img, artista){
+        var pintura = "<div class='card'>"+
+        "<img src='https://www.artic.edu/iiif/2/" + img + "/full/400,/0/default.jpg' class='card-img-top' alt='" + titulo + "'><div class='card-body'>"+
+        "<h5 class='card-title'>" + titulo + "</h5>" + 
+        "<p class='card-text'>" + artista + "</p></div></div>"
     
-;
+        return pintura
+    }
