@@ -14,7 +14,7 @@ $(document).ready(inicioapi)
                 $.each(listadopinturas.data, function(i, arte){
 
                     carta.append(
-                        agregarpintura(arte.title, arte.image_id, arte.artist_title, arte.classification_title)
+                        agregarpintura(arte.title, arte.image_id, arte.artist_title, arte.classification_title, arte.date_display)
                     );
                 })
             },
@@ -25,11 +25,11 @@ $(document).ready(inicioapi)
         })
     };
 
-    function agregarpintura(titulo, img, artista, clasificacion){
+    function agregarpintura(titulo, img, artista, clasificacion, anio){
         var pintura = "<div class='card'>"+
         validafoto(img) + titulo + "'><div class='card-body'>"+
         "<h5 class='card-title'>" + titulo + "</h5>" + 
-        "<p class='card-text'>" + validaotro(artista, clasificacion) + "</p></div></div>"
+        "<p class='card-text'>" + validaotro(artista, clasificacion, anio) + "</p></div></div>"
     
         return pintura
     }
@@ -43,8 +43,8 @@ $(document).ready(inicioapi)
         }
         return valido
     }
-    function validaotro(artista, clasificacion){
-        var validado = "<b>Artista/Procedencia: </b>"+ artista +"<br/><b>Clasificación: </b>" + clasificacion
+    function validaotro(artista, clasificacion, anio){
+        var validado = "<b>Artista/Procedencia: </b>"+ artista +"<br/><b>Clasificación: </b>" + clasificacion.toUpperCase() + "<br/><b>Año: </b>" + anio
 
         return validado
     }
