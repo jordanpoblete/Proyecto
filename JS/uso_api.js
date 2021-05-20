@@ -3,7 +3,7 @@ $(document).ready(inicioapi)
 
     function inicioapi(){
         console.log("Boton traer datos fue clickeado")
-        var urlheyhey = 'https://api.artic.edu/api/v1/artworks?page=102&limit=25'
+        var urlheyhey = 'https://api.artic.edu/api/v1/artworks?page=55&limit=35'
         $.get({
             url: urlheyhey, //DIRECCIÓN SERVER
             success: function(listadopinturas) {
@@ -14,7 +14,7 @@ $(document).ready(inicioapi)
                 $.each(listadopinturas.data, function(i, arte){
 
                     carta.append(
-                        agregarpintura(arte.title, arte.image_id, arte.artist_title)
+                        agregarpintura(arte.title, arte.image_id, arte.artist_title, arte.classification_title)
                     );
                 })
             },
@@ -25,11 +25,26 @@ $(document).ready(inicioapi)
         })
     };
 
-    function agregarpintura(titulo, img, artista){
+    function agregarpintura(titulo, img, artista, clasificacion){
         var pintura = "<div class='card'>"+
-        "<img src='https://www.artic.edu/iiif/2/" + img + "/full/400,/0/default.jpg' class='card-img-top' alt='" + titulo + "'><div class='card-body'>"+
+        validafoto(img) + titulo + "'><div class='card-body'>"+
         "<h5 class='card-title'>" + titulo + "</h5>" + 
-        "<p class='card-text'>" + artista + "</p></div></div>"
+        "<p class='card-text'>" + validaotro(artista, clasificacion) + "</p></div></div>"
     
         return pintura
+    }
+    function validafoto(img){
+    
+        var valido = ""
+        if (img == null){
+            valido = "<img src='http://www.santiagofoods.cl/Imagenes/nodisponible.png' class='card-img-top' alt='";
+        } else {
+            valido =  "<img src='https://www.artic.edu/iiif/2/" + img + "/full/400,/0/default.jpg' class='card-img-top' alt='";
+        }
+        return valido
+    }
+    function validaotro(artista, clasificacion){
+        var validado = "<b>Artista/Procedencia: </b>"+ artista +"<br/><b>Clasificación: </b>" + clasificacion
+
+        return validado
     }
