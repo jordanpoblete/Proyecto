@@ -3,7 +3,7 @@ $(document).ready(inicioapi)
 
     function inicioapi(){
         console.log("Boton traer datos fue clickeado")
-        var urlheyhey = 'https://api.artic.edu/api/v1/artworks?page=55&limit=35'
+        var urlheyhey = 'https://api.artic.edu/api/v1/artworks?page=56&limit=35'
         $.get({
             url: urlheyhey, //DIRECCIÓN SERVER
             success: function(listadopinturas) {
