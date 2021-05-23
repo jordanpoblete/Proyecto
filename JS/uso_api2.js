@@ -16,7 +16,7 @@ function geoFindMe() {
     }
   
     function error() {
-      status.textContent = 'Unable to retrieve your location';
+      status.textContent = 'No se puede acceder a tu ubicación';
     }
   
     if(!navigator.geolocation) {
