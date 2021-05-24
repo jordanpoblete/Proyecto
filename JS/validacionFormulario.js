@@ -4,14 +4,20 @@ $(function() {
 
   $("#rut").hide();
   $("#pasaporte1").hide();
+  $("#rut2").hide();
+  $("#pasaporte2").hide();
 
   $("#Rut").click(function(){
     $("#rut").show(),
+    $("#rut2").show(),
+    $("#pasaporte2").hide(),
     $("#pasaporte1").hide();
   });
   $("#Pasaporte").click(function(){
     $("#pasaporte1").show(),
-    $("#rut").hide();
+    $("#pasaporte2").show(),
+    $("#rut").hide(),
+    $("#rut2").hide();
   });
 
     // Initialize form validation on the registration form.
