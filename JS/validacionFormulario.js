@@ -1,14 +1,17 @@
 // Wait for the DOM to be ready
 $(function() {
-  console.log("#Rut");
+  
+
   $("#rut").hide();
   $("#pasaporte1").hide();
 
   $("#Rut").click(function(){
-    $("#rut").show();
+    $("#rut").show(),
+    $("#pasaporte1").hide();
   });
   $("#Pasaporte").click(function(){
-    $("#pasaporte1").show();
+    $("#pasaporte1").show(),
+    $("#rut").hide();
   });
 
     // Initialize form validation on the registration form.
