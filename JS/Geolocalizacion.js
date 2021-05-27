@@ -36,6 +36,9 @@ function GetPosition(){
 function showLocationOnMap(position){
     var latitud = position.coords.latitude;
     var longitud = position.coords.longitude;
+
+    console.log('Tu latitud es: '+ latitud);
+    console.log('Tu longitud es: '+longitud);
     
     const myLatLng = { lat: latitud, lng: longitud};
     marker.setPosition(myLatLng);
@@ -49,3 +52,4 @@ function errorHandler(err){
       alert ("Error: position no existe o no se encuentra");
     }
   }
+  
