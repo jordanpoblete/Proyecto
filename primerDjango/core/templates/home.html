@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h2>Mi primer formulario</h2>
+
+    <form name="mi-primer-formulario">
+
+        <!-- control tipo input -->
+        <p>
+            <input 
+                type="text" 
+                name="nombre" 
+                id="nombre" 
+                placeholder="Ingresa Nombre"
+                value="Alejandra"
+                readonly 
+            />
+            
+            <input type="password" name="pass" /><br>
+            <input type="date" name="fecha">
+            <input type="number" name="numero" id="numero"><br>
+            <label for="correo">Escribe tu correo</label>
+            <input type="email" name="correo" id="correo">
+
+        </p>
+
+        
+        <fieldset>
+            <legend>Campos favoritos</legend>
+            <!-- Control select-->
+            <p>
+                <label for="alimentoM">Selecciona alimento</label>
+                <select name="alimentoM" id="alimentoM" multiple>
+                    <option value="1">Pan</option>
+                    <option value="cebol">Cebolla</option>
+                    <option>Maní</option>
+                    <option value="4">Sandía</option>
+                </select>
+
+                <br>
+
+                <select name="alimento" id="alimento" size="5">
+                    <optgroup label="Lácteos">
+                        <option value="1">Leche</option>
+                        <option value="2">Queso</option>
+                        <option value="3">Yogurt</option>
+                        
+                    </optgroup>
+                    <optgroup label="Frutas">
+                        <option value="4">Sandía</option>
+                        <option value="5">Palta</option>
+                        <option value="6">Naranja</option>
+                    </optgroup>
+                </select>
+            </p>
+
+            <!-- Control de texto multilinea-->
+            <p>
+                <textarea name="texto" cols="20" rows="10" placeholder="Escribe"></textarea>
+            </p>
+
+            <!-- Control para botones de uso general-->
+            <button type="button">Clickeame</button>
+        </fieldset>
+        <!-- controles de envio y limpieza del formulario -->
+        <p>
+            <input type="submit" name="enviar" value="Mándalo">
+            <input type="reset" value="Limpiar">
+        </p>
+
+    </form>
+    <p>Nombre:{{ nombre }}</p>
+    <p>Edad:{{ edad }}</p>
+    
+</body>
+</html>
